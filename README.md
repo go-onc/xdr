@@ -12,7 +12,7 @@ previous [RFC 1832](https://tools.ietf.org/html/rfc1832) and
 [RFC 1014](https://tools.ietf.org/html/rfc1014.html).
 
 That RFC also specifies an XDR schema language. That language is not implemented
-here; see the companion [xdrgen][https://go.e43.eu/xdrgen] utility.
+here; see the companion [xdrgen](https://go.e43.eu/xdrgen) utility.
 
 ## Compatibility
 This package's version may be below 1.0, but the intention is to avoid any 
