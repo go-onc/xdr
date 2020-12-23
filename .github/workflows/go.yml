@@ -11,7 +11,7 @@ jobs:
     name: Run tests
     strategy:
       matrix:
-        go_version: ["1.12", "1.13", "1.14", "1.15"]
+        go_version: ["1.13", "1.14", "1.15"]
     runs-on: ubuntu-latest
     steps:
     - name: Set up Go ${{ matrix.go_version }}
