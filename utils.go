@@ -29,37 +29,37 @@ func (d *defaultCoder) RegisterCodecReflect(type_ reflect.Type, c xdrinterfaces.
 // that it is not permitted to register any codecs upon it.
 var DefaultCoder defaultCoder
 
-// Marshals o into the returned buffer
+// Marshal marshals o into the returned buffer using DefaultCoder
 func Marshal(o interface{}) ([]byte, error) {
 	return DefaultCoder.Marshal(o)
 }
 
-// Unmarshals buf into the object pointed to by op
+// Unmarshal unmarshals buf into the object pointed to by op using DefaultCoder
 func Unmarshal(buf []byte, op interface{}) error {
 	return DefaultCoder.Unmarshal(buf, op)
 }
 
-// Write marshals o into the passed writer
+// Write marshals o into the passed writer using DefaultCoder
 func Write(w io.Writer, o interface{}) error {
 	return DefaultCoder.Write(w, o)
 }
 
-// Read unmarshals *op out of the passed reader
+// Read unmarshals *op out of the passed reader using DefaultCoder
 func Read(r io.Reader, op interface{}) error {
 	return DefaultCoder.Read(r, op)
 }
 
-// Constructs a new encoder which writes to w
+// NewEncoder constructs a new encoder which writes to w using DefaultCoder
 func NewEncoder(w io.Writer) Encoder {
 	return DefaultCoder.NewEncoder(w)
 }
 
-// Constructs a new decoder which reads from r
+// Constructs a new decoder which reads from r using DefaultCoder
 func NewDecoder(r io.Reader) Decoder {
 	return DefaultCoder.NewDecoder(r)
 }
 
-// Construct a new Coder
+// NewCoder Construct a new Coder
 func NewCoder() Coder {
 	return coder.NewCoder()
 }
