@@ -59,6 +59,7 @@ func NewDecoder(r io.Reader) Decoder {
 	return DefaultCoder.NewDecoder(r)
 }
 
+// Construct a new Coder
 func NewCoder() Coder {
 	return coder.NewCoder()
 }
